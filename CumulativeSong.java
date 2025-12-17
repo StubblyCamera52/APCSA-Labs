@@ -2,6 +2,8 @@
 // 12/16/2025
 // AP CS A
 // Lab #1 - Cumulative Song
+//
+// This program prints the "Their was once an old woman..." song to console
 
 public class CumulativeSong {
 
