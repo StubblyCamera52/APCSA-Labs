@@ -1,3 +1,10 @@
+// Gavan Bess
+// 12/26/2025
+// AP CS A
+// Lab #3 - Cafe Wall
+//
+// Draws the "cafe wall" graphic using the drawing panel
+
 package DrawingPanelThings;
 
 import java.awt.*;
