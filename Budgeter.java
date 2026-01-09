@@ -8,6 +8,7 @@
 import java.util.Scanner;
 
 public class Budgeter {
+
     public static final int DAYS_IN_MONTH = 31;
 
     public static void main(String[] args) {
@@ -59,23 +60,49 @@ public class Budgeter {
         return expenses;
     }
 
-    public static void printNetMonthlyIncomeStats(double income, double expenses) {
-        double roundedIncome = ((double)( (int)(income*100) ))/100; // easy truncate to the 2nd decimal place
-        double roundedExpenses = ((double)( (int)(expenses*100) ))/100;
-        double roundedIncomePerDay = ((double)((int)(roundedIncome*100/DAYS_IN_MONTH)))/100;
-        double roundedExpensesPerDay = ((double)((int)(roundedExpenses*100/DAYS_IN_MONTH)))/100;
+    public static void printNetMonthlyIncomeStats(
+        double income,
+        double expenses
+    ) {
+        double roundedIncome = ((double) ((int) (income * 100))) / 100; // easy truncate to the 2nd decimal place
+        double roundedExpenses = ((double) ((int) (expenses * 100))) / 100;
+        double roundedIncomePerDay =
+            ((double) ((int) ((roundedIncome * 100) / DAYS_IN_MONTH))) / 100;
+        double roundedExpensesPerDay =
+            ((double) ((int) ((roundedExpenses * 100) / DAYS_IN_MONTH))) / 100;
 
         System.out.println();
-        System.out.println("Total income = $" + String.valueOf(roundedIncome) + " ($" + String.valueOf(roundedIncomePerDay) + "/day)");
-        System.out.println("Total expenses = $" + String.valueOf(roundedExpenses) + " ($" + String.valueOf(roundedExpensesPerDay) + "/day)");
+        System.out.println(
+            "Total income = $" +
+                String.valueOf(roundedIncome) +
+                " ($" +
+                String.valueOf(roundedIncomePerDay) +
+                "/day)"
+        );
+        System.out.println(
+            "Total expenses = $" +
+                String.valueOf(roundedExpenses) +
+                " ($" +
+                String.valueOf(roundedExpensesPerDay) +
+                "/day)"
+        );
         System.out.println();
 
-        double differenceInIncomeVSExpenses = ((double)( (int)( (roundedIncome - roundedExpenses)*100 ) ))/100;
+        double differenceInIncomeVSExpenses =
+            ((double) ((int) ((roundedIncome - roundedExpenses) * 100))) / 100;
 
         if (differenceInIncomeVSExpenses <= 0) {
-            System.out.println("You spent $" + Math.abs(differenceInIncomeVSExpenses) + " more than you earned this month.");
+            System.out.println(
+                "You spent $" +
+                    Math.abs(differenceInIncomeVSExpenses) +
+                    " more than you earned this month."
+            );
         } else {
-            System.out.println("You earned $" + Math.abs(differenceInIncomeVSExpenses) + " more than you spent this month.");
+            System.out.println(
+                "You earned $" +
+                    Math.abs(differenceInIncomeVSExpenses) +
+                    " more than you spent this month."
+            );
         }
 
         if (differenceInIncomeVSExpenses > 250) {

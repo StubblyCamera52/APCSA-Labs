@@ -5,3 +5,4 @@
 - [x] 3. Cafe Wall
 - [x] 4. Encryption Machine
 - [x] 5. Budgeter
+- [x] 6. Guessing Game
